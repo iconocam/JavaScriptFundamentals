@@ -203,5 +203,17 @@ function transformData(courseInfo, assignmentGroups, learnerEntries) {
         // }
     }
 }
-// The find() method returns the value of the first element that passes a test. The find() method executes a function for each array element.
 
+// The find() method returns the value of the first element that passes a test. The find() method executes a function for each array element.///** */
+
+let learnerEntry= outputData.find(entry => entry.id === submission.learner_id);
+if (learnerEntry) {
+    learnerEntry = {
+        id: submission.learner_id,
+        avg: 20,
+    }
+};
+outputData.push(learnerEntry);
+}
+
+// this is supposed to create entries per learner submission
