@@ -167,25 +167,41 @@ const assignmentGroups = [
 const learnerEntries = [{
     "learner_id": 1,
     "assignment_id": 101,
+    "submission": {
     "submission_at": "2023-12-05", 
-    "score": 85,
+    "score": 85, },
 },
     {"learner_id": 1,
     "assignment_id": 102,
+    "submission": {
     "submission_at": "2049-12-30",
-    "score": 100,
+    "score": 100, },
 
 },
 {
     "learner_id": 2,
     "assignment_id": 101,
+    "submission": {
     "submission_at": "2023-12-30",
-    "score": 5,
+    "score": 5, },
 },
 {
     "learner_id": 2,
     "assignment_id": 102,
+    "submission": {
     "submission_at": "2150-10-03",
-    "score": 100,
+    "score": 100, },
 },
 ]
+
+function transformData(courseInfo, assignmentGroups, learnerEntries) {
+    const outputData = [];
+
+    for (const assignmentGroup of assignmentGroups) {
+        for (const submission of learnerEntries) {
+        //     if (submission.assignment_id && assignmentGroup.assignments
+        // }
+    }
+}
+// The find() method returns the value of the first element that passes a test. The find() method executes a function for each array element.
+
