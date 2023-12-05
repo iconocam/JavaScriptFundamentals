@@ -132,20 +132,60 @@ const courseInfo= {
 const assignmentGroups = [
     {
         "id": 1,
-        "name": "Psych Eval",
+        "name": "psych-Eval",
         "course_id": 1,
-        "group_weight": 30 ,
+        "total_weight": 30 ,
         "assignments": [
             {
                 "id": 101,
-                "name": "Homework-1",
+                "name": "homework-1",
                 "due_at": "2023-12-06",
                 "points_possible": 100
-            }
+            },
+            {
+        "id": 2,
+        "name": "wizard-Craft",
+        "course_id": 1,
+        "total_weight": 70,
+        "assignments": [
             {
                 "id": 102,
+                "name": "fireOrWater",
+                "due_at": "2050-01-01",
+                "points_possible": 100
             }
+        ]
+            } 
+
         ]
 
     }
+]
+
+// i think i might have went overboard here i might have to dumb this down if it messes up
+
+const learnerEntries = [{
+    "learner_id": 1,
+    "assignment_id": 101,
+    "submission_at": "2023-12-05", 
+    "score": 85,
+},
+    {"learner_id": 1,
+    "assignment_id": 102,
+    "submission_at": "2049-12-30",
+    "score": 100,
+
+},
+{
+    "learner_id": 2,
+    "assignment_id": 101,
+    "submission_at": "2023-12-30",
+    "score": 5,
+},
+{
+    "learner_id": 2,
+    "assignment_id": 102,
+    "submission_at": "2150-10-03",
+    "score": 100,
+},
 ]
