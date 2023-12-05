@@ -164,6 +164,8 @@ const assignmentGroups = [
 
 // i think i might have went overboard here i might have to dumb this down if it messes up
 
+
+// object with key properties
 const learnerEntries = [{
     "learner_id": 1,
     "assignment_id": 101,
@@ -193,6 +195,7 @@ const learnerEntries = [{
     "score": 100, },
 },
 ]
+// transform will restructure the order
 
 function transformData(courseInfo, assignmentGroups, learnerEntries) {
     const outputData = [];
@@ -210,10 +213,26 @@ let learnerEntry= outputData.find(entry => entry.id === submission.learner_id);
 if (learnerEntry) {
     learnerEntry = {
         id: submission.learner_id,
-        avg: 20,
+        avg: "",
     }
 };
 outputData.push(learnerEntry);
 }
 
-// this is supposed to create entries per learner submission
+// this is supposed to create a new entry per learner submission
+
+
+// calculating learner average and scores
+const assignment = aG.assignments.find(a => a.id === submission.assignment_id);
+
+const weightedScore= (submission.submission.score / assignments.points_possible) * aG.total_weight;
+
+learnerEntry.avg += weightedScore;
+
+learnerEntry[assignment_id] = (submission.submission.score / assignment.points_possible) * 100;
+return outputData;
+
+const info = transformData(courseInfo, assignmentGroups, learnerEntries); 
+console.log(info);
+
+//this does NOT work i got lost somewhere it's not even asking me to put a bracket i think i broke it ;(
